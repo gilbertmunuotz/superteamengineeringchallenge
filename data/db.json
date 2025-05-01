@@ -1,0 +1,38 @@
+{
+    "savings": {
+        "userId": 1,
+        "goalAmount": 500000,
+        "targetDate": "2025-06-30",
+        "frequency": "weekly"
+    },
+    "transactions": [
+        {
+            "id": 1,
+            "userId": 1,
+            "amount": 25000,
+            "date": "2025-05-01",
+            "method": "M-Pesa"
+        },
+        {
+            "id": 2,
+            "userId": 1,
+            "amount": 50000,
+            "date": "2025-05-03",
+            "method": "Cash"
+        },
+        {
+            "id": 3,
+            "userId": 1,
+            "amount": 200000,
+            "date": "2025-05-05",
+            "method": "Bank"
+        },
+        {
+            "id": 4,
+            "userId": 1,
+            "amount": 300000,
+            "date": "2025-05-08",
+            "method": "Tigo Pesa"
+        }
+    ]
+}
