@@ -3,8 +3,8 @@ import React from 'react'
 
 export default function Insights() {
     return (
-        <View>
-            <Text>Isights Page</Text>
+        <View className="flex-1 justify-center items-center bg-white">
+            <Text className="text-xl font-bold">Insights Coming Soon 📊</Text>
         </View>
     )
 }
