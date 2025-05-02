@@ -14,7 +14,8 @@ export const savingsAPI = createApi({
             query: () => ({
                 url: '/savings',
                 method: 'GET',
-            })
+            }),
+            providesTags: ['Savings']
         })
     })
 });

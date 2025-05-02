@@ -1,8 +1,9 @@
 export interface Saving {
     userId: number;
     goalAmount: number;
+    dueDate: string;
     targetDate: string;
-    frequency: 'daily' | 'weekly' | 'monthly';
+    frequency: 'monthly';
 }
 
 export interface Transaction {

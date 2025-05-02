@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native'
+import { View, Text, ScrollView, Image, TouchableOpacity, TextInput } from 'react-native'
 import Feather from '@expo/vector-icons/Feather';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
@@ -8,24 +8,24 @@ export default function Profile() {
 
 
     const profileOptions = [
-        { id: "1", title: "My Account", icon: <AntDesign size={24} name="user" color={"white"} /> },
-        { id: "2", title: "Face ID", icon: <MaterialCommunityIcons size={24} name="face-recognition" color={"white"} /> },
-        { id: "3", title: "Two-Factor Authentication", icon: <MaterialCommunityIcons size={24} name="two-factor-authentication" color={"white"} /> },
-        { id: "4", title: "Help & Support", icon: <MaterialIcons size={24} name="support-agent" color={"white"} /> },
-        { id: "5", title: "About App", icon: <Feather size={24} name="info" color={"white"} /> },
+        { id: "1", title: "My Account", icon: <AntDesign size={24} name="user" color={"black"} /> },
+        { id: "2", title: "Face ID", icon: <MaterialCommunityIcons size={24} name="face-recognition" color={"black"} /> },
+        { id: "3", title: "Two-Factor Authentication", icon: <MaterialCommunityIcons size={24} name="two-factor-authentication" color={"black"} /> },
+        { id: "4", title: "Help & Support", icon: <MaterialIcons size={24} name="support-agent" color={"black"} /> },
+        { id: "5", title: "About App", icon: <Feather size={24} name="info" color={"black"} /> },
     ];
 
     return (
         <View className="flex-1">
             {/* Background Theme */}
-            <View className="bg-blue-600 absolute top-0 left-0 right-0 h-3/4" />
+            <View className="bg-blue-500/90 absolute top-0 left-0 right-0 h-3/4" />
             <ScrollView showsVerticalScrollIndicator={false} className="bg-transparent flex-1">
 
                 {/* Hero Section */}
                 <View className="p-10 flex-row items-center mt-12">
                     {/* Profile Image */}
                     <Image
-                        source={{ uri: 'https://www.gravatar.com/avatar/?d=mp' }}
+                        source={require('../../assets/images/profile.jpg')}
                         className="w-28 h-28 rounded-full border-2 border-white"
                         resizeMode="cover"
                     />
@@ -42,16 +42,27 @@ export default function Profile() {
                 </View>
 
                 {/* White Background Section */}
-                <View className="bg-white rounded-t-2xl -mt-6 min-h-screen px-4">
-                    <Text className="text-black text-xl font-bold mt-3">Profile Information</Text>
-                    <Text className="text-gray-700 mt-2">More details about the user...</Text>
+                <View className="bg-white rounded-t-2xl mt-3 min-h-screen px-4">
+                    {/* Search Bar */}
+                    <View className="mt-2">
+                        <View className="flex-row items-center rounded-lg px-3 py-2 border border-gray-300">
+                            <MaterialIcons name="search" size={24} color="#000000" />
+                            <TextInput
+                                className="flex-1 ml-2 text-black text-lg mb-3"
+                                placeholder="Search profile..."
+                                placeholderTextColor="#6B7280"
+                                autoCapitalize="none"
+                            />
+                        </View>
+                    </View>
+
 
                     {/* Profile Options List */}
                     <View className="mt-4">
                         {profileOptions.map((item) => (
                             <TouchableOpacity key={item.id} className="flex-row items-center py-6 border-b border-gray-200">
                                 <View className="mr-3">{item.icon}</View>
-                                <Text className="text-white text-lg">{item.title}</Text>
+                                <Text className="text-black text-lg">{item.title}</Text>
                             </TouchableOpacity>
                         ))}
                     </View>
