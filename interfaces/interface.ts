@@ -1,4 +1,4 @@
-export interface UserSavings {
+export interface Saving {
     userId: number;
     goalAmount: number;
     targetDate: string;

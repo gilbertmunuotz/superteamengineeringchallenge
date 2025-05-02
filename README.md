@@ -19,7 +19,7 @@ npm install
 You will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
 
 ```bash
-npx expo start
+npm expo start
 ```
 
 In the output, you'll find options to open the app in a

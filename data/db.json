@@ -23,14 +23,14 @@
         {
             "id": 3,
             "userId": 1,
-            "amount": 200000,
+            "amount": 20000,
             "date": "2025-05-05",
             "method": "Bank"
         },
         {
             "id": 4,
             "userId": 1,
-            "amount": 300000,
+            "amount": 30000,
             "date": "2025-05-08",
             "method": "Tigo Pesa"
         }
