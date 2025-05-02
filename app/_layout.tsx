@@ -4,6 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import 'react-native-reanimated';
 import { Provider } from "react-redux";
 import { store } from "@/store/store";
+import Toast from "react-native-toast-message";
 
 export default function RootLayout() {
   return (
@@ -13,6 +14,8 @@ export default function RootLayout() {
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
       </Stack>
+
+      <Toast />
     </Provider>
   );
 }

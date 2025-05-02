@@ -16,9 +16,17 @@ export const transactionsAPI = createApi({
                 method: 'GET',
             }),
             providesTags: ['Transactions']
-        })
+        }),
+        postTransactions: builder.mutation<void, Transaction>({
+            query: (newTransaction) => ({
+                url: '/transactions',
+                method: 'POST',
+                body: newTransaction
+            }),
+            invalidatesTags: ['Transactions']
+        }),
     })
 });
 
 // Export hooks for components to use
-export const { useGetTransactionQuery } = transactionsAPI;
+export const { useGetTransactionQuery, usePostTransactionsMutation } = transactionsAPI;

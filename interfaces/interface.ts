@@ -7,8 +7,8 @@ export interface Saving {
 }
 
 export interface Transaction {
-    id: number;
-    userId: number;
+    id?: number;
+    userId: string;
     amount: number;
     date: string;
     method: 'Cash' | 'M-Pesa' | 'Airtel Money' | 'Tigo Pesa' | 'Bank';

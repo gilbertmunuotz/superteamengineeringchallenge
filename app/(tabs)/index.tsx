@@ -1,5 +1,7 @@
 import { format } from 'date-fns'
+import { useState } from 'react';
 import getCurrentMonthYear from '@/utils/date'
+import SavingsModal from '@/components/Savings';
 import { BarChart } from 'react-native-chart-kit';
 import { useGetSavingsQuery } from '@/api/savings';
 import * as Progress from 'react-native-progress';
@@ -12,6 +14,7 @@ import { View, Text, ScrollView, ActivityIndicator, Dimensions } from 'react-nat
 export default function Index() {
 
     const currentDate = getCurrentMonthYear();
+    const [modalVisible, setModalVisible] = useState(false);
 
     // Destructure rtk Hook
     const { data: transactions = [] } = useGetTransactionQuery();
@@ -145,7 +148,11 @@ export default function Index() {
 
 
             </ScrollView>
-            <FloatingActionButton />
+            {/* FAB that toggles modal */}
+            <FloatingActionButton onPress={() => setModalVisible(true)} />
+
+            {/* Modal for adding savings */}
+            <SavingsModal visible={modalVisible} onClose={() => setModalVisible(false)} />
         </SafeAreaView >
     )
 }
