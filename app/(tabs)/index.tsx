@@ -15,7 +15,6 @@ export default function Index() {
 
     // Destructure rtk Hook
     const { data: transactions = [] } = useGetTransactionQuery();
-    console.log(transactions);
     const { data: savings = [], isLoading, isError } = useGetSavingsQuery();
 
     // Calculate total saved

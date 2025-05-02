@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, Image, TouchableOpacity, TextInput } from 'react-native'
+import { View, Text, ScrollView, Image, TouchableOpacity, TextInput, Platform } from 'react-native'
 import Feather from '@expo/vector-icons/Feather';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
@@ -45,7 +45,7 @@ export default function Profile() {
                 <View className="bg-white rounded-t-2xl mt-3 min-h-screen px-4">
                     {/* Search Bar */}
                     <View className="mt-2">
-                        <View className="flex-row items-center rounded-lg px-3 py-2 border border-gray-300">
+                        <View className={`flex-row items-center rounded-lg px-3 ${Platform.OS === 'android' ? 'py-0' : 'py-2'} border border-gray-300`}>
                             <MaterialIcons name="search" size={24} color="#000000" />
                             <TextInput
                                 className="flex-1 ml-2 text-black text-lg mb-3"

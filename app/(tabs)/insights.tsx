@@ -1,10 +1,9 @@
-import { SafeAreaView, ScrollView, View, Text, ActivityIndicator } from 'react-native'
+import { SafeAreaView, ScrollView, View, Text, ActivityIndicator, Platform } from 'react-native'
 import ProgressRing from '@/components/ProgressRing';
 import getCurrentMonthYear from '@/utils/date';
 import { useGetSavingsQuery } from '@/api/savings';
 import { format } from 'date-fns';
 import { useGetTransactionQuery } from '@/api/transactions';
-
 
 export default function Insights() {
     const currentDate = getCurrentMonthYear();
@@ -64,11 +63,11 @@ export default function Insights() {
 
     return (
 
-        <SafeAreaView className="flex-1 bg-white px-4">
-            <ScrollView showsVerticalScrollIndicator={false} className='flex-1'>
+        <SafeAreaView className="flex-1 bg-white">
+            <ScrollView showsVerticalScrollIndicator={false} className={`flex-1 px-4 ${Platform.OS === 'android' ? 'my-12' : 'my-1'}`}>
 
                 {/* Insights & Analytics */}
-                <View className="mt-5 px-4">
+                <View className="mt-5">
                     <Text className="text-black text-2xl font-bold">
                         Insights & Analytics 📈📊
                     </Text>
@@ -79,29 +78,39 @@ export default function Insights() {
 
 
                 {/* Summary Cards */}
-                <View className="px-4">
-                    <View className="flex-row justify-between space-x-6 mt-6">
-                        <View className="flex-1 bg-blue-100 p-4 rounded-xl">
-                            <Text className="text-blue-800 font-semibold">Goal</Text>
-                            <Text className="text-2xl font-bold">Tshs {goalAmount.toLocaleString()}/=</Text>
-                        </View>
-                        <View className="flex-1 bg-green-100 p-4 rounded-xl">
-                            <Text className="text-green-800 font-semibold">Saved</Text>
-                            <Text className="text-2xl font-bold">Tsh {totalSaved.toLocaleString()}/=</Text>
-                        </View>
+                <View className="flex-row justify-between mt-6">
+                    <View className="flex-1 bg-blue-100 p-4 rounded-xl">
+                        <Text className="text-blue-800 font-semibold">Goal</Text>
+                        <Text className="text-2xl font-bold">Tshs {goalAmount.toLocaleString()}/=</Text>
+                    </View>
+                    <View className="flex-1 bg-green-100 p-4 rounded-xl">
+                        <Text className="text-green-800 font-semibold">Saved</Text>
+                        <Text className="text-2xl font-bold">Tsh {totalSaved.toLocaleString()}/=</Text>
                     </View>
                 </View>
 
                 {/* Progress Ring */}
-                <View className="flex-1 bg-white px-4">
+                <View className="flex-1 bg-white">
                     <ProgressRing percent={percentComplete} />
+                    <Text className="text-gray-700 mt-4 font-semibold">Key:</Text>
+                    <View className="mt-2">
+                        <Text className="text-black mt-1 flex-row items-center">
+                            <View className="w-3 h-3 bg-red-600 rounded-full mr-2" /> Under Average
+                        </Text>
+                        <Text className="text-black mt-1 flex-row items-center">
+                            <View className="w-3 h-3 bg-amber-600 rounded-full mr-2" /> Fair
+                        </Text>
+                        <Text className="text-black mt-1 flex-row items-center">
+                            <View className="w-3 h-3 bg-green-600 rounded-full mr-2" /> Excellent
+                        </Text>
+                    </View>
                 </View>
 
 
                 {/* Breakdown */}
-                <View className="mt-6 px-4">
+                <View className="mt-6">
                     <Text className="text-lg font-semibold text-gray-800 mb-2">Breakdown</Text>
-                    <View className="bg-gray-100 p-4 rounded-lg mb-2">
+                    <View className="bg-gray-100 py-4 rounded-lg mb-2">
                         <Text className="text-gray-700">
                             Most Used Method: <Text className="font-semibold">{mostUsedMethod}</Text>
                         </Text>
