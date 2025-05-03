@@ -57,7 +57,7 @@ In the output, you'll find options to open the app in a
 - [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
 - [Expo Go](https://expo.dev/go)
 
-## For Android Devices
+🟣 for Android Devices
 
 Start app by running
 
@@ -71,7 +71,7 @@ or using Yarn
 yarn android
 ```
 
-## For IOS Devices
+🟡 for IOS Devices
 
 Start app by running
 
@@ -85,6 +85,20 @@ or using Yarn
 yarn ios
 ```
 
+## Step 4: Make sure JSON Server is up and Running
+
+If not start by running
+
+```bash
+npm run serve
+```
+
+or using Yarn
+
+```bash
+yarn run serve
+```
+
 # 🎨 Design & Architecture
 
 - UI/UX: Built with nativewind for Tailwind-like utility styling. Layouts are responsive and follow mobile-first principles. <br>
@@ -92,8 +106,7 @@ yarn ios
 - Charts & Animations: Uses react-native-chart-kit and react-native-svg to render smooth animated graphs.<br>
 - Modularity: Components are broken down by responsibility (FAB, Home, Form, Chart, etc.) for scalability and readability.<br><br>
 
-
-# 🧑‍💻 Built By
+# 🧑‍💻 Developed By
 
 Gilbert Munuo <br>
 📱 +255 745 123 607 <br>
