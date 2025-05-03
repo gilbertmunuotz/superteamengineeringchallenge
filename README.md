@@ -1,8 +1,36 @@
 # Welcome to Tunza App 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+# 💰 Tunzaa - Installment Savings App (React Native Challenge)
 
-## Getting started
+Tunzaa is a mobile savings tracker that allows users to manage their installment savings, track progress toward goals, and view insightful feedback on their financial journey. This app is built with **React Native (Expo)** and uses **Redux Toolkit** to simulate API calls with dummy data.
+
+---
+
+## 📱 Features
+
+- 📊 **Track Installment Savings**  
+  View your current savings and contributions in a clean, responsive dashboard.
+
+- ➕ **Add Savings**  
+  Use a floating action button (FAB) to add new savings through an intuitive form with support for amount, date, and payment method.
+
+- 📈 **Progress Toward Goal**  
+  Visualize your financial progress with an animated bar chart.
+
+---
+
+PS: This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+
+## 🧠 Assumptions
+
+- A single user is interacting with the app.
+- The app uses mock transaction data from local state via RTK Query simulation.
+- The savings goal is set statically and progress is calculated based on total contributions.
+- Insights are generated heuristically based on saved amount and date gaps.
+
+---
+
+## Getting started 🚀
 
 ## Step 1: Clone This Repository To Your Local Machine
 
@@ -57,4 +85,16 @@ or using Yarn
 yarn ios
 ```
 
-# App ScreenShots
+# 🎨 Design & Architecture
+
+- UI/UX: Built with nativewind for Tailwind-like utility styling. Layouts are responsive and follow mobile-first principles. <br>
+- Data Management: Uses Redux Toolkit Query to simulate API fetching, including loading and error states.<br>
+- Charts & Animations: Uses react-native-chart-kit and react-native-svg to render smooth animated graphs.<br>
+- Modularity: Components are broken down by responsibility (FAB, Home, Form, Chart, etc.) for scalability and readability.<br><br>
+
+
+# 🧑‍💻 Built By
+
+Gilbert Munuo <br>
+📱 +255 745 123 607 <br>
+🌐 https://gilbertmunuotz.com

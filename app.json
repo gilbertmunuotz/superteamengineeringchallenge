@@ -35,10 +35,24 @@
             "resizeMode": "contain",
             "backgroundColor": "#ffffff"
           }
+        ],
+        "expo-router",
+        [
+          "expo-splash-screen",
+          {
+            "image": "./assets/splash-icon-dark.png",
+            "imageWidth": 200,
+            "resizeMode": "contain",
+            "backgroundColor": "#ffffff"
+          }
         ]
       ],
       "experiments": {
         "typedRoutes": true
+      },
+      "bundleIdentifier": "com.gilbertmunuotz.tunzaapp",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
       }
     },
     "extra": {

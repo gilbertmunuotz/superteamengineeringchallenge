@@ -45,6 +45,13 @@
       "amount": 50000,
       "date": "2025-05-15",
       "method": "Bank"
+    },
+    {
+      "id": "708c",
+      "userId": "1",
+      "amount": 50000,
+      "date": "2025-05-22",
+      "method": "Tigo Pesa"
     }
   ]
 }
