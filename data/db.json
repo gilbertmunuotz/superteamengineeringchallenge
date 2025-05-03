@@ -38,6 +38,20 @@
       "amount": 45000,
       "date": "2025-05-14",
       "method": "Airtel Money"
+    },
+    {
+      "id": "51ee",
+      "userId": "1",
+      "amount": 6000,
+      "date": "2025-05-19",
+      "method": "Airtel Money"
+    },
+    {
+      "id": "bfd8",
+      "userId": "1",
+      "amount": 18000,
+      "date": "2025-05-23",
+      "method": "Bank"
     }
   ]
 }

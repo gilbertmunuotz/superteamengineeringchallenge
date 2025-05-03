@@ -25,7 +25,7 @@ export default function Profile() {
                 <View className="p-10 flex-row items-center mt-12">
                     {/* Profile Image */}
                     <Image
-                        source={require('../../assets/images/profile.jpg')}
+                        source={require('../../assets/profile.jpg')}
                         className="w-28 h-28 rounded-full border-2 border-white"
                         resizeMode="cover"
                     />
