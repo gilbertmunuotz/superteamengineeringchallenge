@@ -4,12 +4,15 @@ import getCurrentMonthYear from '@/utils/date';
 import { useGetSavingsQuery } from '@/api/savings';
 import { format } from 'date-fns';
 import { useGetTransactionQuery } from '@/api/transactions';
+import LastMonthSummary from '@/components/LastMonthSummary';
+
 
 export default function Insights() {
     const currentDate = getCurrentMonthYear();
 
     // Destructure rtk Hook
     const { data: savings = [], isLoading, isError } = useGetSavingsQuery();
+
     const { data: transactions = [] } = useGetTransactionQuery();
 
 
@@ -120,6 +123,8 @@ export default function Insights() {
                     </View>
                 </View>
 
+                {/* History */}
+                <LastMonthSummary savings={savings} transactions={transactions} />
 
                 {/* Footer Tip */}
                 <View className="mt-10 mb-6">
