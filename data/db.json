@@ -3,16 +3,8 @@
     {
       "userId": 1,
       "goalAmount": 500000,
-      "dueDate": "2025-05-01",
-      "targetDate": "2025-05-31",
-      "frequency": "monthly",
-      "id": "c304"
-    },
-    {
-      "userId": 1,
-      "goalAmount": 400000,
-      "dueDate": "2025-04-01",
-      "targetDate": "2025-04-30",
+      "dueDate": "2025-08-01",
+      "targetDate": "2025-08-30",
       "frequency": "monthly",
       "id": "64a3"
     }
@@ -22,35 +14,28 @@
       "id": "b86c",
       "userId": "1",
       "amount": 20000,
-      "date": "2025-05-14",
+      "date": "2025-08-1",
       "method": "Airtel Money"
-    },
-    {
-      "id": "51ee",
-      "userId": "1",
-      "amount": 60000,
-      "date": "2025-05-19",
-      "method": "Airtel Money"
-    },
-    {
-      "id": "bfd8",
-      "userId": "1",
-      "amount": 20000,
-      "date": "2025-05-23",
-      "method": "Bank"
-    },
-    {
-      "id": "869d",
-      "userId": "1",
-      "amount": 50000,
-      "date": "2025-05-15",
-      "method": "Bank"
     },
     {
       "id": "708c",
       "userId": "1",
       "amount": 50000,
-      "date": "2025-05-22",
+      "date": "2025-08-22",
+      "method": "Tigo Pesa"
+    },
+    {
+      "id": "804e",
+      "userId": "1",
+      "amount": 65000,
+      "date": "2025-08-14",
+      "method": "Cash"
+    },
+    {
+      "id": "1408",
+      "userId": "1",
+      "amount": 45000,
+      "date": "2025-08-09",
       "method": "Tigo Pesa"
     }
   ]

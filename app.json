@@ -63,6 +63,10 @@
     "owner": "gilbertmunuotz",
     "android": {
       "package": "com.gilbertmunuotz.tunzaapp"
-    }
+    },
+    "plugins": [
+      "expo-router",
+      "expo-web-browser"
+    ]
   }
 }
