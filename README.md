@@ -110,4 +110,4 @@ yarn run serve
 
 Gilbert Munuo <br>
 📱 +255 745 123 607 <br>
-🌐 https://gilbertmunuotz.vercel.app
+🌐 https://gilbertmunuotz.com
